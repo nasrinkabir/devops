@@ -1,5 +1,14 @@
 # private
 
+* Prerequisite
+	. Docker
+	. nodejs
+	. Minikube
+	. Kubectl
+	. Helm
+   (Refer installation_instruction.txt for installing above softwares on Ubuntu 18.04)
+
+
 
 sudo docker build -t my-mysql .
 
