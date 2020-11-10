@@ -1,0 +1,50 @@
+version: '3.1'
+
+services:
+   mysqldb:
+     image: my-mysql
+     volumes:
+       - db_data:/var/lib/mysql
+     networks:
+       mysql_internal:
+         aliases: ["mysqldb"]
+     environment:
+       MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
+       MYSQL_DATABASE: helloworld
+       MYSQL_USER: nodejs
+       MYSQL_PASSWORD_FILE: /run/secrets/db_password
+     secrets:
+       - db_root_password
+       - db_password
+
+   nodejsapp:
+     depends_on:
+       - mysqldb
+     image: my-nodejs:latest
+     networks:
+       mysql_internal:
+         aliases: ["nodejsapp"]
+       nodejs_public:
+     ports:
+       - "4002:4000"
+     environment:
+       NODEJS_DB_HOST: mysqldb:3306
+       NODEJS_DB_USER: nodejs
+       NODEJS_DB_PASSWORD_FILE: /run/secrets/db_password
+     secrets:
+       - db_password
+
+secrets:
+   db_password:
+     file: db_password.txt
+   db_root_password:
+     file: db_root_password.txt
+
+volumes:
+    db_data:
+networks:
+  mysql_internal:
+    driver: "overlay"
+    internal: true
+  nodejs_public:
+    driver: "overlay"
