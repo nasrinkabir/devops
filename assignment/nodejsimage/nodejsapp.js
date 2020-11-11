@@ -37,11 +37,13 @@ connection.query(queryString, (error, rows, fields) => {
     return console.error(error.message);
   }
   result = rows[0].text;
-  console.log(result);
+  console.log('resulti from db : ' + result);
 });
+
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write('Hello World!');
+  res.write('Hello World!\n');
   res.end();
 }).listen(4000);
+
