@@ -1,12 +1,12 @@
 
 * Prerequisite <br/><br/>
-        . Docker <br/>
-        . nodejs <br/>
-        . Minikube<br/>
-        . Kubectl <br/>
-        . Helm <br/>
-        . enable ingress in kubectl<br/>
-     (Refer installation_instruction for installing above tools on Ubuntu 18.04)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. Docker <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. nodejs <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. Minikube<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. Kubectl <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. Helm <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. enable ingress in kubectl<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(Refer installation_instruction for installing above tools on Ubuntu 18.04)<br/>
 <br/>
 <br/>
 
@@ -30,7 +30,7 @@
 <br/>
 * Install helm chart:<br/>
 <br/>
-        cd devops/nodejsapp/<br/>
-        sudo helm install <RELEASE_NAME>  helm-chart/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd devops/nodejsapp/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sudo helm install <RELEASE_NAME>  helm-chart/<br/>
 
 	
