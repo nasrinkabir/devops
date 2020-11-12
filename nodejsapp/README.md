@@ -32,4 +32,4 @@
      cd devops/nodejsapp/<br/>
      sudo helm install <RELEASE_NAME>  helm-chart/<br/>
 <br/>
-*You will be able to browse the result <HOST_IP>:30000
+*You will be able to browse the result HOST_IP:30000
