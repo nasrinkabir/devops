@@ -23,10 +23,10 @@
 
 * Generate secrets for mysql:<br/>
 <br/>
-     By echoing the password you want in respective files and generate secrets: <br/>
-        echo -n "ChooseYourPassword" > mysql-password<br/>
-        echo -n "ChooseYourRootPassword" > mysql-root-password<br/>
-        sudo kubectl create secret generic api-db-pass --from-file=./mysql-root-password --from-file=./mysql-password<br/>
+> By echoing the password you want in respective files and generate secrets: <br/>
+>> echo -n "ChooseYourPassword" > mysql-password<br/>
+>> echo -n "ChooseYourRootPassword" > mysql-root-password<br/>
+>> sudo kubectl create secret generic api-db-pass --from-file=./mysql-root-password --from-file=./mysql-password<br/>
 <br/>
 * Install helm chart:<br/>
 <br/>
