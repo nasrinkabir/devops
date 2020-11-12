@@ -30,7 +30,7 @@
 * Install helm chart:<br/>
 <br/>
      cd devops/nodejsapp/<br/>
-     sudo helm install /<RELEASE_NAME/>  helm-chart/<br/>
+     sudo helm install RELEASE_NAME  helm-chart/<br/>
           (RELEASE_NAME : provide a name for this app release.)<br/>
 <br/>
-*You will be able to browse the result at /<HOST_IP/>:30000
+*You will be able to browse the result at HOST_IP:30000
