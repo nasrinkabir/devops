@@ -28,7 +28,7 @@
      sudo kubectl create secret generic api-db-pass --from-file=./mysql-root-password --from-file=./mysql-password<br/>
 <br/>
 * Install helm chart:<br/>
-<br/> RELEASE_NAME : provide a name for this app release.<br/>
+<br/>      RELEASE_NAME : provide a name for this app release.<br/>
      cd devops/nodejsapp/<br/>
      sudo helm install RELEASE_NAME  helm-chart/<br/>
 <br/>
