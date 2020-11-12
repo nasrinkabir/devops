@@ -18,6 +18,13 @@ const connection = mysql.createConnection({
 	database: process.env.MYSQL_DATABASE 
 });
 
+var host = process.env.ASSIGNMENT_MYSQL_SERVICE_HOST;
+var user = process.env.DB_USER;
+var password = process.env.DB_PASSWORD;
+var database = process.env.DB_DATABASE;
+console.log (host + " " + user + " " +  password + " " + database);
+
+console.log(process.env);
 
 connection.connect(function(err) {
       if (err) {
@@ -46,4 +53,3 @@ http.createServer(function (req, res) {
   res.write('Hello World!\n');
   res.end();
 }).listen(4000);
-
