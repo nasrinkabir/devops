@@ -6,24 +6,22 @@
 	. Minikube
 	. Kubectl
 	. Helm
-   (Refer installation_instruction.txt for installing above softwares on Ubuntu 18.04)
+	. enable ingress in kubectl
+   (Refer installation_instruction.txt for installing above tools on Ubuntu 18.04)
 
 
-
-sudo docker build -t my-mysql .
-
-
-sudo docker run  -d --env MYSQL_ROOT_PASSWORD='password' --name=my-mysql-microservice my-mysql
+* Checkout git repo
+	git clone https://github.com/nasrinkabir/devops.git
 
 
-docker build -t my-nodejs .
+* build your image
+	cd devops/nodejsapp/nodejsimage/
+	sudo docker build -t test/my-nodejs . 
+
+* Generate secrets for mysql
+      Ex: 
+	echo -n "passw0rd" > mysql-password
+	echo -n "rootpassw0rd" > mysql-root-password
+	sudo kubectl create secret generic api-db-pass --from-file=./mysql-root-password --from-file=./mysql-password
 
 
-sudo docker run  -d \
---publish 4001:4000 \
--e MYSQL_USER='root' \
--e MYSQL_PASSWORD='password' \
--e MYSQL_DATABASE='helloworld' \
--e MYSQL_HOST='172.17.0.4' \
---link my-mysql-microservice:db \
---name=my-nodejs-microservice my-nodejs
