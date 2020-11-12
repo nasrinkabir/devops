@@ -1,11 +1,11 @@
 
 * Prerequisite <br/><br/>
--	. Docker <br/>
--	. nodejs <br/>
--	. Minikube<br/>
--	. Kubectl <br/>
--	. Helm <br/>
--	. enable ingress in kubectl<br/>
+	. Docker <br/>
+	 . nodejs <br/>
+	. Minikube<br/>
+	. Kubectl <br/>
+	. Helm <br/>
+	. enable ingress in kubectl<br/>
    -(Refer installation_instruction.txt for installing above tools on Ubuntu 18.04)<br/>
 <br/>
 <br/>
