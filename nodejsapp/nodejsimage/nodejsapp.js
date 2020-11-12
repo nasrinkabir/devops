@@ -12,19 +12,18 @@ const HOST = process.env.HOST || '0.0.0.0';
 
 // mysql credentials
 const connection = mysql.createConnection({
-	host: process.env.MYSQL_HOST,
-	user: process.env.MYSQL_USER, 
-	password: process.env.MYSQL_PASSWORD, 
-	database: process.env.MYSQL_DATABASE 
+	host: process.env.DB_HOST,
+	user: process.env.DB_USER, 
+	password: process.env.DB_PASSWORD, 
+	database: process.env.DB_DATABASE 
 });
 
-var host = process.env.ASSIGNMENT_MYSQL_SERVICE_HOST;
+var host = process.env.DB_HOST;
 var user = process.env.DB_USER;
 var password = process.env.DB_PASSWORD;
 var database = process.env.DB_DATABASE;
 console.log (host + " " + user + " " +  password + " " + database);
 
-console.log(process.env);
 
 connection.connect(function(err) {
       if (err) {
