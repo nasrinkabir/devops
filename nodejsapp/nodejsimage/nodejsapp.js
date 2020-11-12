@@ -18,12 +18,6 @@ const connection = mysql.createConnection({
 	database: process.env.DB_DATABASE 
 });
 
-var host = process.env.DB_HOST;
-var user = process.env.DB_USER;
-var password = process.env.DB_PASSWORD;
-var database = process.env.DB_DATABASE;
-console.log (host + " " + user + " " +  password + " " + database);
-
 
 connection.connect(function(err) {
       if (err) {
