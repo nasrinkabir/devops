@@ -14,12 +14,6 @@
      git clone https://github.com/nasrinkabir/devops.git<br/>
 <br/>
 <br/>
-
-* build your image:<br/>
-<br/>
-     cd devops/nodejsapp/nodejsimage/<br/>
-     sudo docker build -t test/my-nodejs . <br/>
-</br>
 * Generate secrets for mysql:<br/>
 <br/>
    By echoing the password you want in respective files and generate secrets: <br/>

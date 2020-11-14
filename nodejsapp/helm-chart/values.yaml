@@ -5,9 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: test/my-nodejs
+  repository: nasrinkabir/my-nodejs
   tag: latest
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 nameOverride: ""
 fullnameOverride: ""
