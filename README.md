@@ -28,10 +28,11 @@
      sudo helm install RELEASE_NAME  helm-chart/<br/>
                     (RELEASE_NAME : provide a name for this app release.)<br/>
 <br/>
-*You will be able to browse the result at HOST_IP:30000
+*At this point your application should be running and You will be able to browse the result at HOST_IP:30000*
 </br>
 
-  If you need to rbuild the image : <br/>
+
+</br></br>In case if you need to rbuild the image : <br/>
      cd devops/nodejsapp/nodejsimage/ <br/>
      sudo docker build -t nasrinkabir/my-nodejs .<br/>
      <br/>
