@@ -13,11 +13,11 @@
 <br/>
      git clone https://github.com/nasrinkabir/devops.git<br/>
 <br/>
-```  To Rebuild the image in case needed:<br/>
+  To Rebuild the image in case needed:<br/>
      cd devops/nodejsapp/nodejsimage/ <br/>
      sudo docker build -t nasrinkabir/my-nodejs .<br/>
      <br/>
- ```
+
 <br/>
 * Generate secrets for mysql:<br/>
 <br/>
