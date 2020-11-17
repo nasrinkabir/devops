@@ -13,10 +13,6 @@
 <br/>
      git clone https://github.com/nasrinkabir/devops.git<br/>
 <br/>
-  To Rebuild the image in case needed:<br/>
-     cd devops/nodejsapp/nodejsimage/ <br/>
-     sudo docker build -t nasrinkabir/my-nodejs .<br/>
-     <br/>
 
 <br/>
 * Generate secrets for mysql:<br/>
@@ -33,3 +29,9 @@
                     (RELEASE_NAME : provide a name for this app release.)<br/>
 <br/>
 *You will be able to browse the result at HOST_IP:30000
+</br>
+
+  If you need to rbuild the image : <br/>
+     cd devops/nodejsapp/nodejsimage/ <br/>
+     sudo docker build -t nasrinkabir/my-nodejs .<br/>
+     <br/>
