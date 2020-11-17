@@ -5,7 +5,7 @@
       . Kubectl <br/>
       . Helm <br/>
       . enable ingress in kubectl<br/>
-	  (Refer installation_instruction for installing above tools on Ubuntu 18.04)<br/>
+	  (Use devops/nodejsapp/installation_instruction for installing above tools on Ubuntu 18.04)<br/>
 <br/>
 <br/>
 
