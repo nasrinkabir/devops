@@ -13,6 +13,10 @@ metadata:
   annotations:
     {{- toYaml . | nindent 4 }}
   {{- end }}
+ports:
+- port: 80 
+  targetPort: {{ .Values.service.internalPort }}
+  protocol: TCP
 spec:
 {{- if .Values.ingress.tls }}
   tls:

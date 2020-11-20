@@ -6,17 +6,19 @@ replicaCount: 1
 
 image:
   repository: nasrinkabir/my-nodejs
-  tag: latest
+  tag: dev
   pullPolicy: Always
-
+  env:
+  - name: MY_ENV
+    value: "Some Value"
 nameOverride: ""
 fullnameOverride: ""
 
 service:
   type: NodePort
-  exposePort: 30000
-  targetPort: 4000
-  internalPort: 3000
+  exposePort: 30001
+  targetPort: 80
+  internalPort: 4000
 
 
 ingress:
@@ -53,7 +55,7 @@ affinity: {}
 
 # mysql
 mysql:
-  mysqlDatabase: helloworld
+        #  mysqlDatabase: helloworld
   mysqlUser: mysql-user
   existingSecret: api-db-pass
   initializationFiles:

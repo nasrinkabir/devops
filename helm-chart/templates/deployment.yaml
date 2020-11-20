@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag  }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
           - name: "DB_HOST"
@@ -34,10 +34,10 @@ spec:
                  name: "api-db-pass"
                  key: mysql-password
           - name: "DB_DATABASE"
-            value: "helloworld"
+            value: {{ .Values.mysql.mysqlDatabase }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.targetPort }}
+              containerPort: {{ .Values.service.internalPort }}
               protocol: TCP
           livenessProbe:
             httpGet:
