@@ -34,3 +34,4 @@ sudo apt install nodejs -y
 
 sudo snap install helm --classic
 
+rm -f minikube_1.12.0-0_amd64.deb
