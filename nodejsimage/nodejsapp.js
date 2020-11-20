@@ -44,5 +44,6 @@ connection.query(queryString, (error, rows, fields) => {
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.write('Hello World!\n');
+  res.write('Dev Env!\n');
   res.end();
 }).listen(4000);

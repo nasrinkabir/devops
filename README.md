@@ -1,38 +1,45 @@
-* Prerequisite <br/><br/>
-      . Docker <br/>
-      . nodejs <br/>
-      . Minikube<br/>
-      . Kubectl <br/>
-      . Helm <br/>
-      . enable ingress in kubectl<br/>
-	  (Use devops/nodejsapp/installation_instruction for installing above tools on Ubuntu 18.04)<br/>
-<br/>
-<br/>
-
-* Checkout git repo:<br/>
-<br/>
-     git clone https://github.com/nasrinkabir/devops.git<br/>
-<br/>
-
-<br/>
-* Generate secrets for mysql:<br/>
-<br/>
-   By echoing the password you want in respective files and generate secrets: <br/>
-     echo -n "ChooseYourPassword" > mysql-password<br/>
-     echo -n "ChooseYourRootPassword" > mysql-root-password<br/>
-     sudo kubectl create secret generic api-db-pass --from-file=./mysql-root-password --from-file=./mysql-password<br/>
-<br/>
-* Install helm chart:<br/>
-<br/>
-     cd devops/nodejsapp/<br/>
-     sudo helm install RELEASE_NAME  helm-chart/<br/>
-                    (RELEASE_NAME : provide a name for this app release.)<br/>
-<br/>
-*At this point your application should be running and You will be able to browse the result at HOST_IP:30000*
-</br>
+# Prerequisite 
+	- Docker 
+	- nodejs 
+	- Minikube
+	- Kubectl
+	- Helm
+	- Enable ingress in kubectl
+(Use devops/installation_instruction for installing above tools on Ubuntu 18.04)
 
 
-</br></br>In case if you need to rbuild the image : <br/>
-     cd devops/nodejsapp/nodejsimage/ <br/>
-     sudo docker build -t nasrinkabir/my-nodejs .<br/>
-     <br/>
+## Checkout git repo:
+
+```
+git clone https://github.com/nasrinkabir/devops.git
+```
+
+## To deploy application in producton environment use below script:
+```
+./helmInstallProd.sh
+```
+	- This script will create a kubernetes namespace prod
+	- Create secrets for prod MySQL database
+	- Deployes Release prodnodejsapp in the namespace prod
+	- Prod applicatipn can be accessed at IP:30000
+
+## To deploy application in development environment use below script:
+```
+./helmInstallDev.sh
+```
+	- This script will create a kubernetes namespace dev
+	- Create secrets for dev MySQL database
+	- Deployes Release devnodejsapp in the namespace prod
+	- Dev applicatipn can be accessed at IP:30001
+
+## To Upgrade application in producton environment use below script:
+```
+./helmUpgradeProd.sh
+```
+	- Script reinstalls the helm RELEASE, hence re-pulling image
+## To Upgrade application in producton environment use below script:
+```
+./helmUpgradeDev.sh
+```
+	- Script reinstalls the helm RELEASE, hence re-pulling image
+
