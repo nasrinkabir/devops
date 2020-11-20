@@ -8,9 +8,6 @@ image:
   repository: nasrinkabir/my-nodejs
   tag: dev
   pullPolicy: Always
-  env:
-  - name: MY_ENV
-    value: "Some Value"
 nameOverride: ""
 fullnameOverride: ""
 
@@ -57,7 +54,7 @@ affinity: {}
 mysql:
         #  mysqlDatabase: helloworld
   mysqlUser: mysql-user
-  existingSecret: api-db-pass
+  #  existingSecret: api-db-pass
   initializationFiles:
     1-createTable.sql: |-
       CREATE TABLE helloworld ( text varchar(25)); 
