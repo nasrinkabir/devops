@@ -20,7 +20,7 @@ sudo kubectl create secret generic dev-db-cred --from-file=./mysql-root-password
 
 # Deploy RELEASE using helm template for Development environment.
 
-sudo helm install devnodejsapp --set image.tag="dev" --set mysql.mysqlDatabase="devDatabase" --set mysql.existingSecret="dev-db-cred" --namespace dev --create-namespace nodejs-helm-chart/
+sudo helm install devnodejsapp --set image.tag="dev" --set service.exposePort=30001 --set mysql.mysqlDatabase="devDatabase" --set mysql.existingSecret="dev-db-cred" --namespace dev --create-namespace nodejs-helm-chart/
 
 #remove generated password files.
 

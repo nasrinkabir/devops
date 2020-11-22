@@ -21,7 +21,7 @@ sudo kubectl create secret generic prod-db-cred --from-file=./mysql-root-passwor
 
 # Deploy RELEASE using helm template for Production environment.
 
-sudo helm install prodnodejsapp  --set image.tag="prod" --set mysql.mysqlDatabase="prodDatabase" --set mysql.existingSecret="prod-db-cred" --namespace prod --create-namespace nodejs-helm-chart/
+sudo helm install prodnodejsapp  --set image.tag="prod"  --set service.exposePort=30000 --set mysql.mysqlDatabase="prodDatabase" --set mysql.existingSecret="prod-db-cred" --namespace prod --create-namespace nodejs-helm-chart/
 
 
 #remove generated password files.

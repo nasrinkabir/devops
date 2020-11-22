@@ -13,6 +13,6 @@ sleep 60
 
 # Upgrade RELEASE 
 
-sudo helm upgrade --install $RELEASE_NAME --set image.tag="dev" --set mysql.mysqlDatabase="devDatabase" --set mysql.existingSecret="dev-db-cred" --namespace $NAMESPACE --create-namespace nodejs-helm-chart/
+sudo helm upgrade --install $RELEASE_NAME --set image.tag="dev"  --set service.exposePort=30001 --set mysql.mysqlDatabase="devDatabase" --set mysql.existingSecret="dev-db-cred" --namespace $NAMESPACE --create-namespace nodejs-helm-chart/
 
 

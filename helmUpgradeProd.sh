@@ -13,5 +13,5 @@ sleep 60
 
 # Upgrade  RELEASE 
 
-sudo helm install $RELEASE_NAME  --set image.tag="prod" --set mysql.mysqlDatabase="prodDatabase" --set mysql.existingSecret="prod-db-cred" --namespace $NAMESPACE --create-namespace nodejs-helm-chart/
+sudo helm install $RELEASE_NAME  --set image.tag="prod"  --set service.exposePort=30000 --set mysql.mysqlDatabase="prodDatabase" --set mysql.existingSecret="prod-db-cred" --namespace $NAMESPACE --create-namespace nodejs-helm-chart/
 

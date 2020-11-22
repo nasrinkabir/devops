@@ -13,7 +13,7 @@ fullnameOverride: ""
 
 service:
   type: NodePort
-  exposePort: 30001
+  #  exposePort: 30001
   targetPort: 80
   internalPort: 4000
 
