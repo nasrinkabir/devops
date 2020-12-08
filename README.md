@@ -1,6 +1,5 @@
 # Prerequisite 
 	- Docker 
-	- nodejs 
 	- Minikube
 	- Kubectl
 	- Helm
@@ -37,7 +36,7 @@ git clone https://github.com/nasrinkabir/devops.git
 ./helmUpgradeProd.sh
 ```
 	- Script reinstalls the helm RELEASE, hence re-pulling image
-## To Upgrade application in producton environment use below script:
+## To Upgrade application in dev environment use below script:
 ```
 ./helmUpgradeDev.sh
 ```
