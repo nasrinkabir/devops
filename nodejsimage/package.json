@@ -6,7 +6,7 @@
     "start": "node nodejsapp.js"
   },
   "description" : "nodejs app to connect to mysql and print 'hello world' from a db field",
-  "author" : "Nasrin Kabir <nasrink@cybage.com>",
+  "author" : "Nasrin Kabir <nasrinkabirt@gmail.com>",
   "repository" : {"type": "git", "url": "git@github.com:nasrinkabir/devopschallange.git"},
   "homepage" : "http://documentcloud.github.com/underscore/",
   "keywords": [
