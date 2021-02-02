@@ -1,5 +1,5 @@
 /**
- * @author Nasrin Kabir <nasrink@cybage.com> 
+ * @author Nasrin Kabir <nasrinkabirt@gmail.com> 
  */
 
 const mysql = require('mysql');
